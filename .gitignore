@@ -1,0 +1,17 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# dotenv
+.env
+*.pyc
+*.pyc
+*.pyc
+backend/__pycache__/init.cpython-311.pyc

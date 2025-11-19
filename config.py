@@ -8,6 +8,8 @@ class Settings(BaseSettings):
     MONGODB_COLLECTION:str="asistenteIA"
     MAX_MSGS_HISTORY:int=12
     SESSION_ID:int=1
+    MODEL_NAME:str="deepseek-chat"
+    MODEL_URL:str="https://api.deepseek.com"
 
     class Config:
         env_file = ".env"

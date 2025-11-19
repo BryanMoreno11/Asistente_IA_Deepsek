@@ -1,14 +1,12 @@
 from openai import OpenAI
 from prompts.system_prompts import RAG_SYSTEM_PROMPT
-from typing import List
-from langchain.schema import Document
 from langchain_core.messages import BaseMessage,trim_messages, HumanMessage, AIMessage
 
 from config import settings
 
 class DeepseekLLM:
     def __init__(self, api_key: str):
-        self.client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
+        self.client = OpenAI(api_key=api_key, base_url=settings.MODEL_URL)
 
     def generate(self, system_prompt: str, user_prompt: str) -> str:
         messages = [
@@ -16,7 +14,7 @@ class DeepseekLLM:
             {"role": "user", "content": user_prompt},
         ]
         response = self.client.chat.completions.create(
-            model="deepseek-chat",
+            model=settings.MODEL_NAME,
             messages=messages,
             stream=False,
         )

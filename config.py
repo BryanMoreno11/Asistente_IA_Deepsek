@@ -6,7 +6,7 @@ class Settings(BaseSettings):
     API_CHAT_ENDPOINT: str = "http://localhost:5000/api/chat"
     MONGODB_URI:str="mongodb://localhost:27017/"
     MONGODB_COLLECTION:str="asistenteIA"
-    MAX_MSGS_HISTORY:int=12
+    MAX_MSGS_HISTORY:int=8
     SESSION_ID:int=1
     MODEL_NAME:str="deepseek-chat"
     MODEL_URL:str="https://api.deepseek.com"
